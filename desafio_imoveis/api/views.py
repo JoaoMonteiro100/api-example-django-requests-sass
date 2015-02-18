@@ -4,7 +4,13 @@ import json
 import client
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    #return HttpResponse("Hello, world. You're at the polls index.")
+
+    c = client.Client()
+    data = c.get_ad_list()
+    return HttpResponse(data, content_type="application/json")
+    #return render(request, 'api/index.html', context)
+
 
 def ad_list():
     c = client
