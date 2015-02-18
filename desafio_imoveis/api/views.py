@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 import json
 import client
 
@@ -8,8 +8,9 @@ def index(request):
 
     c = client.Client()
     data = c.get_ad_list()
-    return HttpResponse(data, content_type="application/json")
-    #return render(request, 'api/index.html', context)
+    context = {'ads_list': data}
+    #return HttpResponse(data, content_type="application/json")
+    return render(request, 'api/index.html', context)
 
 
 def ad_list():

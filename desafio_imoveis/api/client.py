@@ -1,5 +1,4 @@
 import requests
-
 import settings
 
 BASE_URL = "http://57e5585e.ngrok.com/houses-api-demo/api/v1/house/"
