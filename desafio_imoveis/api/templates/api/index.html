@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
+    <title>Title</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}api/css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}api/css/style.css">
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-	<script src="{{ STATIC_URL }}api/js/script.js"></script>
+	<script src="{{STATIC_URL}}api/js/script.js"></script>
   </head>
   <body>
-    <div id="map-canvas"></div>
+  
+ <!-- MENU -->
+ <div>
+  <ul class="navbar">
+  <li class="navbar-item">
+    <a class="navbar-item-target" href="#"><strong>LISTAR ANUNCIOS</strong></a>
+  </li>
+</div>
+  
+  <div id="map-canvas"></div>
+
+<!--
+  {% if ads_list %}
+    <ul>
+    {% for ad in ads_list.houses %}
+      <li>{{ad.slug}}</li>
+    {% endfor %}
+    </ul>
+    {% else %}
+      <p>No ads are available</p>
+    {% endif %}
+	-->
   </body>
 </html>

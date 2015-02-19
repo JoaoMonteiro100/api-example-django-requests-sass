@@ -1,16 +1,16 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import redirect, render
 import json
 import client
 
 def index(request):
-    #return HttpResponse("Hello, world. You're at the polls index.")
-
     c = client.Client()
-    data = c.get_ad_list()
+    data = json.loads(c.get_ad_list())
+    #data = c.get_ad_list()
     context = {'ads_list': data}
     #return HttpResponse(data, content_type="application/json")
     return render(request, 'api/index.html', context)
+    #return JsonResponse(data)
 
 
 def ad_list():

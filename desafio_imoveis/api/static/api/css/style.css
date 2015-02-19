@@ -1,5 +1,54 @@
+/*green*/
+/*darker green*/
+/*red*/
+/*beige*/
+/*dark grey*/
+/*medium grey*/
+/*beige*/
+/* line 10, style.scss */
 html, body, #map-canvas {
-        height: 100%;
-        margin: 0px;
-        padding: 0px
-      }
+  height: 100%;
+  margin: 0px;
+  padding: 27px 0px;
+}
+
+/* line 16, style.scss */
+body {
+  font-family: sans-serif;
+  font-weight: 100;
+  background: #03a56a;
+}
+
+/* line 22, style.scss */
+.navbar {
+  background: #03a56a;
+  font-size: 14px;
+  padding: 0 10px;
+  position: fixed;
+  top: -14px;
+  width: 100%;
+  padding: 7px 0px;
+}
+
+/* line 32, style.scss */
+.navbar-item {
+  display: inline-block;
+  position: relative;
+  padding: 20px 0px;
+}
+
+/* line 38, style.scss */
+.navbar-item-target {
+  color: #f2f2ef;
+  display: inline;
+  padding: 20px 14px;
+  text-decoration: none;
+  position: fixed;
+  right: 7%;
+  top: 0px;
+}
+/* line 47, style.scss */
+.navbar-item-target:hover, .is-selected .navbar-item-target {
+  background: #1a8c62;
+  color: #f2f2ef;
+}
