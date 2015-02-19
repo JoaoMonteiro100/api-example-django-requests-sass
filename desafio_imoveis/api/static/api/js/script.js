@@ -2,10 +2,16 @@ var map;
 function initialize() {
   var mapOptions = {
     zoom: 16,
-    center: new google.maps.LatLng(38.87173918814673, -9.079158804507415)
+    center: new google.maps.LatLng(38.87173918814673, -9.079158804507415),
+	disableDefaultUI: true
   };
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	  
+   var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(38.87173918814673, -9.079158804507415),
+      map: map,
+      title:"Test"
+  });
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
