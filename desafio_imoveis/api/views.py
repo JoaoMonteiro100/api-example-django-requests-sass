@@ -6,11 +6,8 @@ import client
 def index(request):
     c = client.Client()
     data = json.loads(c.get_ad_list())
-    #data = c.get_ad_list()
     context = {'ads_list': data}
-    #return HttpResponse(data, content_type="application/json")
     return render(request, 'api/index.html', context)
-    #return JsonResponse(data)
 
 
 def ad_list():
