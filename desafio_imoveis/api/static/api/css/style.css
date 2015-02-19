@@ -1,16 +1,16 @@
-/*green*/
-/*darker green*/
-/*red*/
-/*beige*/
-/*dark grey*/
-/*medium grey*/
+/*green; alternative: #03A56A*/
+/*darker green; alternative: #1A8C62*/
+/*red; alternative: #F25E5E*/
+/*beige; alternative: #F2F2EF*/
+/*dark grey; alternative: #535353*/
+/*medium grey; alternative: #757575*/
 /*beige*/
 /*light grey*/
 /* line 11, style.scss */
 body {
   font-family: sans-serif;
   font-weight: 100;
-  background: #03a56a;
+  background: #00a678;
   height: 100%;
   margin: 0px;
   padding: 54px 0px;
@@ -31,6 +31,15 @@ h1 small {
 }
 
 /* line 33, style.scss */
+h2 {
+  font-size: 1.2em;
+  font-variant: normal;
+  font-weight: 300;
+  line-height: 0px;
+  color: #858585;
+}
+
+/* line 41, style.scss */
 h3 {
   font-size: 1em;
   font-variant: normal;
@@ -38,7 +47,16 @@ h3 {
   line-height: 15px;
 }
 
-/* line 40, style.scss */
+/* line 48, style.scss */
+h4 {
+  font-size: 1em;
+  color: #f45e60;
+  font-variant: bold;
+  font-weight: 600;
+  line-height: 0px;
+}
+
+/* line 56, style.scss */
 h6 {
   font-size: 0.875em;
   font-variant: bold;
@@ -46,7 +64,16 @@ h6 {
   line-height: 26px;
 }
 
-/* line 47, style.scss */
+/* line 63, style.scss */
+p small {
+  color: #858585;
+  font-size: 0.8em;
+  padding-left: 15px;
+  position: relative;
+  top: -15px;
+}
+
+/* line 71, style.scss */
 #map-canvas {
   height: 94%;
   width: 100%;
@@ -55,7 +82,7 @@ h6 {
   z-index: -1;
 }
 
-/* line 55, style.scss */
+/* line 79, style.scss */
 #pull-up, #pull-down {
   height: 40px;
   width: 25px;
@@ -67,23 +94,23 @@ h6 {
   border-bottom-right-radius: 5px;
   top: 75px;
 }
-/* line 66, style.scss */
+/* line 90, style.scss */
 #pull-up:hover, .is-selected #pull-up, #pull-down:hover, .is-selected #pull-down {
-  background: #f2f2ef;
+  background: #f1f2ed;
 }
 
-/* line 71, style.scss */
+/* line 95, style.scss */
 #pull-up {
   left: 0px;
 }
 
-/* line 75, style.scss */
+/* line 99, style.scss */
 #pull-down {
   left: 50%;
   visibility: hidden;
 }
 
-/* line 80, style.scss */
+/* line 104, style.scss */
 #pull-up img, #pull-down img {
   height: 16px;
   position: relative;
@@ -91,11 +118,11 @@ h6 {
   top: 30%;
 }
 
-/* line 87, style.scss */
+/* line 111, style.scss */
 #contents {
   height: 94%;
   width: 50%;
-  background: #f2f2ef;
+  background: #f1f2ed;
   position: fixed;
   top: 54px;
   left: 0px;
@@ -104,18 +131,27 @@ h6 {
   visibility: hidden;
 }
 
-/* line 99, style.scss */
+/* line 123, style.scss */
 #legal-area {
   height: 100%;
   width: 70%;
   position: relative;
-  top: 20px;
+  top: -45px;
   left: 12%;
+  z-index: 3;
 }
 
-/* line 107, style.scss */
+/* line 132, style.scss */
+#scrollable {
+  padding-top: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 75%;
+}
+
+/* line 139, style.scss */
 .navbar {
-  background: #03a56a;
+  background: #00a678;
   font-size: 14px;
   padding: 0 10px;
   position: fixed;
@@ -125,16 +161,16 @@ h6 {
   z-index: 3;
 }
 
-/* line 118, style.scss */
+/* line 150, style.scss */
 .navbar-item {
   display: inline-block;
   position: relative;
   padding: 20px 0px;
 }
 
-/* line 124, style.scss */
+/* line 156, style.scss */
 .navbar-item-target {
-  color: #f2f2ef;
+  color: #f1f2ed;
   display: inline;
   padding: 7px 30px;
   text-decoration: none;
@@ -148,85 +184,142 @@ h6 {
 	box-shadow: inset 6px -5px 82px -12px rgba(117,117,117,0.32);
   }*/
 }
-/* line 133, style.scss */
+/* line 165, style.scss */
 .navbar-item-target:hover, .is-selected .navbar-item-target {
-  background: #1a8c62;
+  background: #189472;
   color: white;
 }
 
-/* line 145, style.scss */
+/* line 177, style.scss */
 .button {
   color: white;
-  background: #03a56a;
+  background: #00a678;
   padding: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-decoration: none;
   position: relative;
 }
-/* line 151, style.scss */
+/* line 185, style.scss */
 .button:hover, .is-selected .button {
-  background: #1a8c62;
+  background: #189472;
+}
+/* line 188, style.scss */
+.button img {
+  vertical-align: middle;
+  padding-bottom: 3px;
 }
 
-/* line 156, style.scss */
+/* line 194, style.scss */
 .muted {
   background: #E7E7E5;
   border: 1px solid #D9D9D7;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   position: relative;
-  left: 0px;
+  top: 88px;
+  height: 25px;
+  left: -1px;
   width: 100%;
 }
 
-/* line 165, style.scss */
+/* line 206, style.scss */
 .left_option {
   color: white;
   font-size: 0.9em;
-  background: #03a56a;
+  background: #00a678;
   padding: 7px;
+  padding-left: 11px;
+  padding-right: 11px;
   text-decoration: none;
   position: relative;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-/* line 174, style.scss */
+/* line 217, style.scss */
 .left_option:hover {
-  background: #1a8c62;
-  color: #f2f2ef;
+  background: #189472;
+  color: #f1f2ed;
 }
-/* line 178, style.scss */
+/* line 221, style.scss */
 .is-selected .left_option {
-  color: #757575;
+  color: #858585;
   background: white;
 }
-/* line 182, style.scss */
+/* line 225, style.scss */
 .left_option img {
   vertical-align: middle;
   padding-bottom: 3px;
 }
 
-/* line 188, style.scss */
+/* line 231, style.scss */
 .right_option {
-  color: #757575;
+  color: #858585;
   font-size: 0.9em;
   background: white;
   padding: 7px;
+  padding-left: 11px;
+  padding-right: 11px;
   text-decoration: none;
   position: relative;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-/* line 197, style.scss */
+/* line 242, style.scss */
 .right_option:hover {
-  background: #1a8c62;
-  color: #f2f2ef;
+  background: #189472;
+  color: #f1f2ed;
 }
-/* line 201, style.scss */
+/* line 246, style.scss */
 .is-selected .right_option {
   color: white;
-  background: #03a56a;
+  background: #00a678;
 }
-/* line 205, style.scss */
+/* line 250, style.scss */
 .right_option img {
   vertical-align: middle;
   padding-bottom: 3px;
+}
+
+/* line 256, style.scss */
+.house {
+  width: 40%;
+  float: left;
+  padding-right: 10%;
+}
+/* line 261, style.scss */
+.house a {
+  text-decoration: none;
+}
+/* line 265, style.scss */
+.house img {
+  padding-top: 15px;
+  width: 100%;
+  height: 125px;
+}
+/* line 271, style.scss */
+.house #place {
+  background: white;
+  color: #343530;
+  font-variant: bold;
+  font-weight: 600;
+  font-size: 0.85em;
+  border: 1px solid #D9D9D7;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 1px 1px 3px #D9D9D7;
+}
+/* line 282, style.scss */
+.house #info {
+  background: white;
+  color: #343530;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #D9D9D7;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  box-shadow: 1px 1px 3px #D9D9D7;
+  position: relative;
+  top: -1px;
 }
