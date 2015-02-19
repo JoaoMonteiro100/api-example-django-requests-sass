@@ -1,9 +1,9 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #00A678; /*green; alternative: #03A56A*/
 $primary-accent: #189472; /*darker green; alternative: #1A8C62*/
-$secondary-color: #F45E60; /*red; alternative: #F25E5E*/
+$secondary-color: #F25E5E; /*red; alternative: #F45E60*/
 $terciary-color: #F1F2ED; /*beige; alternative: #F2F2EF*/
-$dark-text-color: #343530; /*dark grey; alternative: #535353*/
+$dark-text-color: #535353; /*dark grey; alternative: 343530#*/
 $medium-text-color: #858585; /*medium grey; alternative: #757575*/
 $light-text-color: #F1F2ED; /*beige*/
 $shadows-color: #BABABA; /*light grey*/
@@ -133,7 +133,8 @@ p small {
   padding-top:20px;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 75%;
+  height: 76%;
+  width:125%;
 }
 
 .navbar {
@@ -214,6 +215,7 @@ p small {
   position: relative;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  box-shadow: 1px 1px 3px $shadows-color;
   &:hover {
     background: $primary-accent;
 	color: $light-text-color;
@@ -239,9 +241,10 @@ p small {
   position: relative;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  box-shadow: 1px 1px 3px $shadows-color;
   &:hover {
-    background: $primary-accent;
-	color: $light-text-color;
+    background: $terciary-color;
+	color: $dark-text-color;
   }
   .is-selected & {
     color: white;
@@ -254,7 +257,7 @@ p small {
 }
 
 .house {
-	width: 40%;
+	width: 35%;
 	float: left;
 	padding-right: 10%;
 
@@ -264,8 +267,10 @@ p small {
   
   img {
     padding-top: 15px;
-    width: 100%;
-	height: 125px;
+    width: 109%;
+	height: 150px;
+	position: relative;
+	bottom: -5px;
   }
   
   #place {
@@ -278,6 +283,12 @@ p small {
 	padding: 10px;
 	width: 100%;
 	box-shadow: 1px 1px 3px #D9D9D7;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
+	&:hover {
+      background: $terciary-color;
+    }
   }
   #info {
     background: white;
@@ -291,5 +302,8 @@ p small {
 	box-shadow: 1px 1px 3px #D9D9D7;
 	position: relative;
 	top: -1px;
+	&:hover {
+      background: $terciary-color;
+    }
   }
 }

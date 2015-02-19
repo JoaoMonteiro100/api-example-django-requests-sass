@@ -1,21 +1,3 @@
-var map;
-function initialize() {
-  var mapOptions = {
-    zoom: 16,
-    center: new google.maps.LatLng(38.87173918814673, -9.079158804507415),
-	disableDefaultUI: true
-  };
-  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-	  
-   var marker = new google.maps.Marker({
-      position: new google.maps.LatLng(38.87173918814673, -9.079158804507415),
-      map: map,
-      title:"Test"
-  });
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-
 var Navbar = {};
 
 Navbar.active = true;
@@ -49,3 +31,24 @@ $('.navbar-item').on('mouseenter', function() {
 $(document).on('click', function() {
   Navbar.close();
 });
+
+function howLongAgo(somedate) {
+	var today, onehour, oneday, difference, text;
+	today = new Date();
+	onehour = 1000*60*60; /* miliseconds in 1 hour */
+	oneday = 1000*60*60*24; /* miliseconds in 1 day */
+	
+	if (today - somedate < onehour) {
+		difference = (today - somedate)%1000%60; /* in minutes */
+	    text = "Adicionado há " + difference + " minutos.";
+	} else if (today - somedate < oneday) {
+		difference = (today - somedate)%1000%60%60; /* in hours */
+	    text = "Adicionado há " + difference + " horas.";
+	} else {
+		difference = (today - somedate)%1000%60%60%24; /* in days */
+	    text = "Adicionado há " + difference + " dias.";
+	}
+	/* document.getElementById("date").innerHTML = text; */
+};
+
+document.getElementById("date").innerHTML = howLongAgo(1422456727000);
