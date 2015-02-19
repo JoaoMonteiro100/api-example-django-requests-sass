@@ -6,40 +6,102 @@ $terciary-color: #F2F2EF; /*beige*/
 $dark-text-color: #535353; /*dark grey*/
 $medium-text-color: #757575; /*medium grey*/
 $light-text-color: #F2F2EF; /*beige*/
+$shadows-color: #BABABA; /*light grey*/
 
-html, body, #map-canvas {
+body {
+  font-family: sans-serif;
+  font-weight: 100;
+  background: $primary-color;
   height: 100%;
   margin: 0px;
-  padding: 27px 0px;
+  padding: 54px 0px;
+  font-family: 'Signika Negative', Helvetica, sans-serif;
+  font-style: normal;
 }
 
-#pull-up {
+h1 {
+  font-size: 1.7em;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 26px;
+  
+  small {
+    font-size: 0.65em;
+  }
+}
+
+h3 {
+  font-size: 1em;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 15px;
+}
+
+h6 {
+  font-size: 0.875em;
+  font-variant: bold;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+#map-canvas {
+  height: 94%;
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  z-index: -1;
+}
+
+#pull-up, #pull-down {
   height: 40px;
-  width: 50px;
+  width: 25px;
   position: fixed;
-  top: 75px;
-  left: -25px;
   background: white;
   z-index: +1;
-  box-shadow: 1px 1px 5px $medium-text-color;
-  border-radius: 5px;
+  box-shadow: 1px 1px 3px $shadows-color;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  top: 75px;
   
   &:hover, .is-selected & {
     background: $light-text-color;
   }
 }
 
-#pull-up img {
-	height:16px;
-	position: relative;
-	left: 70%;
-	top: 30%;
+#pull-up {
+  left: 0px;
 }
 
-body {
-  font-family: sans-serif;
-  font-weight: 100;
-  background: $primary-color;
+#pull-down {
+  left: 50%;
+  visibility: hidden;
+}
+
+#pull-up img, #pull-down img {
+  height:16px;
+  position: relative;
+  left: 30%;
+  top: 30%;
+}
+
+#contents {
+  height: 94%;
+  width: 50%;
+  background: $terciary-color;
+  position: fixed;
+  top: 54px;
+  left: 0px;
+  z-index: +2;
+  box-shadow: 1px 1px 3px $shadows-color;
+  visibility: hidden;
+}
+
+#legal-area {
+  height: 100%;
+  width: 70%;
+  position: relative;
+  top: 20px;
+  left: 12%;
 }
 
 .navbar {
@@ -50,6 +112,7 @@ body {
   top: -14px;
   width: 100%;
   padding: 7px 0px;
+  z-index: +3;
 }
 
 .navbar-item {
@@ -61,7 +124,7 @@ body {
 .navbar-item-target {
   color: $light-text-color;
   display: inline;
-  padding: 20px 14px;
+  padding: 7px 30px;
   text-decoration: none;
   position: fixed;
   right: 7%;
@@ -70,5 +133,77 @@ body {
   &:hover, .is-selected & {
     background: $primary-accent;
     color: white;
+  }
+  /*
+  .is-selected & {
+	-webkit-box-shadow: inset 6px -5px 82px -12px rgba(117,117,117,0.32);
+	-moz-box-shadow: inset 6px -5px 82px -12px rgba(117,117,117,0.32);
+	box-shadow: inset 6px -5px 82px -12px rgba(117,117,117,0.32);
+  }*/
+}
+
+.button {
+  color: white;
+  background: $primary-color;
+  padding: 12px;
+  text-decoration: none;
+  position: relative;
+  &:hover, .is-selected & {
+    background: $primary-accent;
+  }
+}
+
+.muted {
+  background: #E7E7E5;
+  border: 1px solid #D9D9D7;
+  padding: 20px;
+  position: relative;
+  left: 0px;
+  width: 100%;
+}
+
+.left_option {
+  color: white;
+  font-size: 0.9em;
+  background: $primary-color;
+  padding: 7px;
+  text-decoration: none;
+  position: relative;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  &:hover {
+    background: $primary-accent;
+	color: $light-text-color;
+  }
+  .is-selected & {
+    color: $medium-text-color;
+	background: white;
+  }
+  img {
+    vertical-align: middle;
+	padding-bottom: 3px;
+  }
+}
+
+.right_option {
+  color: $medium-text-color;
+  font-size: 0.9em;
+  background: white;
+  padding: 7px;
+  text-decoration: none;
+  position: relative;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  &:hover {
+    background: $primary-accent;
+	color: $light-text-color;
+  }
+  .is-selected & {
+    color: white;
+	background: $primary-color;
+  }
+  img {
+    vertical-align: middle;
+	padding-bottom: 3px;
   }
 }

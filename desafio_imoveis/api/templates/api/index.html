@@ -5,6 +5,7 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}api/css/style.css">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Signika+Negative" />
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 	<script src="{{STATIC_URL}}api/js/script.js"></script>
   </head>
@@ -14,14 +15,35 @@
  <div>
   <ul class="navbar">
   <li class="navbar-item">
-    <a class="navbar-item-target" href="#"><strong>LISTAR ANUNCIOS</strong></a>
+    <a class="navbar-item-target" active="true" href="#" onClick="document.getElementById('contents').style.visibility='visible'; document.getElementById('pull-down').style.visibility='visible';"><h3>LISTAR ANÚNCIOS</h3></a>
   </li>
-</div>
+  </div>
+  <div id="contents">
+	<div id="legal-area">
+      <h1 style="padding-bottom:10px;">IMÓVEIS | <small>  SÍTIO PERFEITO
+	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-left:0.7em; padding-bottom:0.2em;" />
+	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-bottom:0.2em;" />
+	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-bottom:0.2em;" />
+	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-bottom:0.2em;" />
+	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-bottom:0.2em;" />
+	  </small></h1>
+	<div class="muted">
+	<a class="button" href="#"><img src="{{STATIC_URL}}api/icons/list.png" height="15px" /><h3 style="display:inline; padding-left:15px;">LISTA</h3></a>
+	</div>
+	<div style="padding-top:30px;">
+	  <a class="left_option" href="#">Preço</a><a class="right_option" href="#">Data</a>
+	  <span style="padding:10px;"></span>
+	  <a class="left_option" href="#"><img src="{{STATIC_URL}}api/icons/grid.png" height="15px" /></a><a class="right_option" href="#"><img src="{{STATIC_URL}}api/icons/list_muted.png" height="15px" /></a>
+	</div>
+	</div>
   
+  
+  </div>
   <div id="map-canvas"></div>
 
-  <a id="pull-up" href="#"><img src="{{STATIC_URL}}api/icons/arrow_right.png"></img></a>
-  
+  <a id="pull-up" href="#" onClick="document.getElementById('contents').style.visibility='visible'; document.getElementById('pull-down').style.visibility='visible';"><img src="{{STATIC_URL}}api/icons/arrow_right.png"></img></a>
+  <a id="pull-down" href="#" onClick="document.getElementById('contents').style.visibility='hidden'; document.getElementById('pull-down').style.visibility='hidden';"><img src="{{STATIC_URL}}api/icons/arrow_left.png"></img></a>
+
 <!--
   {% if ads_list %}
     <ul>

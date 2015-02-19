@@ -18,7 +18,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 var Navbar = {};
 
-Navbar.active = false;
+Navbar.active = true;
 
 Navbar.open = function(el) {
   var navbar = $(el).closest('.navbar')
