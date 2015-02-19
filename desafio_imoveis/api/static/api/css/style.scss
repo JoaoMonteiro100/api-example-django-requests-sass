@@ -198,7 +198,7 @@ p small {
   padding-top: 20px;
   padding-bottom: 20px;
   position: relative;
-  top: 88px;
+  top: 96px;
   height: 25px;
   left: -1px;
   width: 100%;
@@ -306,4 +306,14 @@ p small {
       background: $terciary-color;
     }
   }
+}
+
+  object::-webkit-scrollbar {
+    display: none;
+}
+	object {
+    height: 100%;
+	width: 125%;
+	border: 0;
+	overflow-y:hidden;
 }

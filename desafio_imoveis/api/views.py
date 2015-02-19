@@ -10,6 +10,13 @@ def index(request):
     return render(request, 'api/index.html', context)
 
 
+def grid(request):
+    c = client.Client()
+    data = json.loads(c.get_ad_list())
+    context = {'ads_list': data}
+    return render(request, 'api/grid.html', context)
+
+
 def ad_list():
     c = client
     data = c.get_ad_list()

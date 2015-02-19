@@ -218,7 +218,7 @@ p small {
   padding-top: 20px;
   padding-bottom: 20px;
   position: relative;
-  top: 88px;
+  top: 96px;
   height: 25px;
   left: -1px;
   width: 100%;
@@ -338,4 +338,17 @@ p small {
 /* line 305, style.scss */
 .house #info:hover {
   background: #f1f2ed;
+}
+
+/* line 311, style.scss */
+object::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 314, style.scss */
+object {
+  height: 100%;
+  width: 125%;
+  border: 0;
+  overflow-y: hidden;
 }

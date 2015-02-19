@@ -9,6 +9,9 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 	<script src="{{STATIC_URL}}api/js/script.js"></script>
 	<script src="{{STATIC_URL}}api/js/google_maps.js"></script>
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+	<script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
+	<script type='text/javascript' src='js/dynamicpage.js'></script>
   </head>
   <body>
   
@@ -16,86 +19,28 @@
  <div>
   <ul class="navbar">
   <li class="navbar-item">
-    <a class="navbar-item-target" active="true" href="#" onClick="document.getElementById('contents').style.visibility='visible'; document.getElementById('pull-down').style.visibility='visible';"><h3>LISTAR ANÚNCIOS</h3></a>
+    <a class="navbar-item-target" id="grid" href="grid.html"><h3>LISTAR ANÚNCIOS</h3></a>
+
+	
   </li>
   </div>
   <div id="contents">
   <div class="muted"></div>
 	<div id="legal-area">
-      <h1 style="padding-bottom:25px;">IMÓVEIS | <small>  SÍTIO PERFEITO
-	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-left:0.7em; padding-bottom:0.2em;" />
-	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-bottom:0.2em;" />
-	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-bottom:0.2em;" />
-	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-bottom:0.2em;" />
-	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-bottom:0.2em;" />
-	  </small></h1>
 	
-	<a class="button" href="#"><img src="{{STATIC_URL}}api/icons/list.png" height="15px" /><h3 style="display:inline; padding-left:15px;">LISTA</h3></a>
-	<div style="padding-top:25px;"></div>
-	<div id="scrollable">
-	  <a class="left_option" href="#">Preço</a><a class="right_option" href="#">Data</a>
-	  <span style="padding:10px;"></span>
-	  <a class="left_option" href="#"><img src="{{STATIC_URL}}api/icons/grid.png" height="15px" /></a><a class="right_option" href="#"><img src="{{STATIC_URL}}api/icons/list_muted.png" height="15px" /></a>
-	<div style="padding-top:35px;"></div>
-	<div id="results">
-	
-	{% if ads_list %}
-	  {% for ad in ads_list.houses %}
-	  
-	  <div class="house">
-		<a href="#">
-		
-		  <!-- CODE TO GET THE PROFILE PIC OF AN AD -->
-		  <!--{% for photo in ad.photos %}
-			{% if photo.profile %}
-			  <img src="data:image/jpeg;base64,{{photo.uri}}" alt="">
-			{% else %}
-			  <img src="{{STATIC_URL}}api/images/placeholder.jpg" alt="">
-			{% endif %}
-		  {% endfor %}-->
-		  
-		  
-		    <img src="{{STATIC_URL}}api/images/placeholder.jpg" alt="">
-			
-			<div id="place">{{ad.location.address}}</div>
-			<div id="info">
-			  <h2>{{ad.ad_title}}</h2>
-			  <h4>{{ad.rent_price}} €</h4>
-			</div>
-		</a>
-		<p><small id="date" onload="howLongAgo({{ad.date}})"></small><p>
-		
-	  </div>
-	  {% endfor %}
-	{% else %}
-	  <p>De momento não há imóveis disponíveis.</p>
-	{% endif %}
-	  
-	  
-	</div>
-	</div>
-	
+	<head>
+
+</head>
 	<!--
-	
-	{% if ads_list %}
-    <ul>
-    {% for ad in ads_list.houses %}
-      <span>{{ad.slug}}
-	  <br>
-	  
-	  <br>
-	  {{ad.description}}
-	  <br>
-	  {{ad.ad_title}}
-	  
-	  </span>
-    {% endfor %}
-    </ul>
-    {% else %}
-      <p>No ads are available</p>
-    {% endif %}
-	
+	<iframe src="grid.html" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" >
+    </iframe>
 	-->
+	<!--<iframe src="grid.html" seamless></iframe>-->
+
+	<object type="text/html" data="grid.html">
+<p>backup content</p>
+</object>
+
 	</div>
   
   
