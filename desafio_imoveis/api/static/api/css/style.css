@@ -146,7 +146,7 @@ p small {
   padding-top: 20px;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 76%;
+  height: 550px;
   width: 125%;
 }
 
@@ -178,12 +178,6 @@ p small {
   position: fixed;
   right: 7%;
   top: 0px;
-  /*
-  .is-selected & {
-	-webkit-box-shadow: inset 6px -5px 82px -12px rgba(117,117,117,0.32);
-	-moz-box-shadow: inset 6px -5px 82px -12px rgba(117,117,117,0.32);
-	box-shadow: inset 6px -5px 82px -12px rgba(117,117,117,0.32);
-  }*/
 }
 /* line 166, style.scss */
 .navbar-item-target:hover, .is-selected .navbar-item-target {
@@ -191,7 +185,7 @@ p small {
   color: white;
 }
 
-/* line 178, style.scss */
+/* line 172, style.scss */
 .button {
   color: white;
   background: #00a678;
@@ -201,30 +195,30 @@ p small {
   text-decoration: none;
   position: relative;
 }
-/* line 186, style.scss */
+/* line 180, style.scss */
 .button:hover, .is-selected .button {
   background: #189472;
 }
-/* line 189, style.scss */
+/* line 183, style.scss */
 .button img {
   vertical-align: middle;
   padding-bottom: 3px;
 }
 
-/* line 195, style.scss */
+/* line 189, style.scss */
 .muted {
   background: #E7E7E5;
   border: 1px solid #D9D9D7;
   padding-top: 20px;
   padding-bottom: 20px;
   position: relative;
-  top: 96px;
+  top: 97px;
   height: 25px;
   left: -1px;
   width: 100%;
 }
 
-/* line 207, style.scss */
+/* line 201, style.scss */
 .left_option {
   color: white;
   font-size: 0.9em;
@@ -238,23 +232,23 @@ p small {
   border-bottom-left-radius: 5px;
   box-shadow: 1px 1px 3px #bababa;
 }
-/* line 219, style.scss */
+/* line 213, style.scss */
 .left_option:hover {
   background: #189472;
   color: #f1f2ed;
 }
-/* line 223, style.scss */
+/* line 217, style.scss */
 .is-selected .left_option {
   color: #858585;
   background: white;
 }
-/* line 227, style.scss */
+/* line 221, style.scss */
 .left_option img {
   vertical-align: middle;
   padding-bottom: 3px;
 }
 
-/* line 233, style.scss */
+/* line 227, style.scss */
 .right_option {
   color: #858585;
   font-size: 0.9em;
@@ -268,41 +262,41 @@ p small {
   border-bottom-right-radius: 5px;
   box-shadow: 1px 1px 3px #bababa;
 }
-/* line 245, style.scss */
+/* line 239, style.scss */
 .right_option:hover {
   background: #f1f2ed;
   color: #535353;
 }
-/* line 249, style.scss */
+/* line 243, style.scss */
 .is-selected .right_option {
   color: white;
   background: #00a678;
 }
-/* line 253, style.scss */
+/* line 247, style.scss */
 .right_option img {
   vertical-align: middle;
   padding-bottom: 3px;
 }
 
-/* line 259, style.scss */
+/* line 253, style.scss */
 .house {
   width: 35%;
   float: left;
   padding-right: 10%;
 }
-/* line 264, style.scss */
+/* line 258, style.scss */
 .house a {
   text-decoration: none;
 }
-/* line 268, style.scss */
+/* line 262, style.scss */
 .house img {
-  padding-top: 15px;
-  width: 109%;
+  padding-top: 10px;
+  width: 111%;
   height: 150px;
   position: relative;
   bottom: -5px;
 }
-/* line 276, style.scss */
+/* line 270, style.scss */
 .house #place {
   background: white;
   color: #535353;
@@ -317,11 +311,11 @@ p small {
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 289, style.scss */
+/* line 283, style.scss */
 .house #place:hover {
   background: #f1f2ed;
 }
-/* line 293, style.scss */
+/* line 287, style.scss */
 .house #info {
   background: white;
   color: #535353;
@@ -335,17 +329,17 @@ p small {
   position: relative;
   top: -1px;
 }
-/* line 305, style.scss */
+/* line 299, style.scss */
 .house #info:hover {
   background: #f1f2ed;
 }
 
-/* line 311, style.scss */
+/* line 305, style.scss */
 object::-webkit-scrollbar {
   display: none;
 }
 
-/* line 314, style.scss */
+/* line 308, style.scss */
 object {
   height: 100%;
   width: 125%;
@@ -353,12 +347,12 @@ object {
   overflow-y: hidden;
 }
 
-/* line 321, style.scss */
+/* line 315, style.scss */
 #content {
   visibility: visible;
 }
 
-/* line 325, style.scss */
+/* line 319, style.scss */
 #list {
   visibility: hidden;
 }

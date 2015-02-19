@@ -31,6 +31,13 @@ def content(request):
     return render(request, 'api/content.html', context)
 
 
+def ad_page(request, slug):
+    c = client.Client()
+    data = json.loads(c.get_ad(slug))
+    context = {'ads_list': data}
+    return render(request, 'api/ad_page.html', context)
+
+"""
 def ad_list():
     c = client
     data = c.get_ad_list()
@@ -55,3 +62,4 @@ def ad_types():
     c = client
     data = c.get_ad_types()
     return HttpResponse(data, mimetype="application/json")
+"""

@@ -35,7 +35,6 @@ $(document).on('click', function() {
 function howLongAgo(some_date) {
 	var today, twohours, twodays, difference, text;
 	today = new Date();
-	/* today = getTime(); */
 	pub_date = new Date(some_date);
 	twohours = 1000*60*60*2; /* milliseconds in 2 hours */
 	twodays = 1000*60*60*24*2; /* milliseconds in 2 days */
@@ -50,7 +49,5 @@ function howLongAgo(some_date) {
 		difference = Math.floor((today - pub_date) / (1000*60*60*24)); /* in days */
 	    text = "Adicionado há " + difference + " dias.";
 	}
-	/* document.getElementById("date").innerHTML = text; */
-	/* document.getElementById("date").innerHTML = text; */
 	return text;
 };

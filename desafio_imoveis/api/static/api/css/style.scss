@@ -133,8 +133,8 @@ p small {
   padding-top:20px;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 76%;
-  width:125%;
+  height: 550px;
+  width: 125%;
 }
 
 .navbar {
@@ -167,12 +167,6 @@ p small {
     background: $primary-accent;
     color: white;
   }
-  /*
-  .is-selected & {
-	-webkit-box-shadow: inset 6px -5px 82px -12px rgba(117,117,117,0.32);
-	-moz-box-shadow: inset 6px -5px 82px -12px rgba(117,117,117,0.32);
-	box-shadow: inset 6px -5px 82px -12px rgba(117,117,117,0.32);
-  }*/
 }
 
 .button {
@@ -198,7 +192,7 @@ p small {
   padding-top: 20px;
   padding-bottom: 20px;
   position: relative;
-  top: 96px;
+  top: 97px;
   height: 25px;
   left: -1px;
   width: 100%;
@@ -266,8 +260,8 @@ p small {
   }
   
   img {
-    padding-top: 15px;
-    width: 109%;
+    padding-top: 10px;
+    width: 111%;
 	height: 150px;
 	position: relative;
 	bottom: -5px;
@@ -315,7 +309,7 @@ p small {
     height: 100%;
 	width: 125%;
 	border: 0;
-	overflow-y:hidden;
+	overflow-y: hidden;
 }
 
   #content {
