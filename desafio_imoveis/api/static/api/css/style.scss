@@ -311,9 +311,17 @@ p small {
   object::-webkit-scrollbar {
     display: none;
 }
-	object {
+  object {
     height: 100%;
 	width: 125%;
 	border: 0;
 	overflow-y:hidden;
+}
+
+  #content {
+    visibility: visible;
+}
+
+  #list {
+    visibility: hidden;
 }

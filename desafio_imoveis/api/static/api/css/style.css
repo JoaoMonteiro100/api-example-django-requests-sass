@@ -352,3 +352,13 @@ object {
   border: 0;
   overflow-y: hidden;
 }
+
+/* line 321, style.scss */
+#content {
+  visibility: visible;
+}
+
+/* line 325, style.scss */
+#list {
+  visibility: hidden;
+}

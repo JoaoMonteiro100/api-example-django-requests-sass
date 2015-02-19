@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}api/css/style.css">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Signika+Negative" />
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src="{{STATIC_URL}}api/js/script.js"></script>
+	<script src="{{STATIC_URL}}api/js/google_maps.js"></script>
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+	<script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
+	<script type='text/javascript' src='js/dynamicpage.js'></script>
+	<style type="text/css">html,body{background-color:transparent;}</style>
+  </head>
+  <body>
+
+	<div id="legal-area">
+	
+	  <!-- Page title -->
+	  <h1 style="padding-bottom:25px;">IMOVEIS | <small>  SITIO PERFEITO
+	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-left:0.7em; padding-bottom:0.2em;" />
+	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-bottom:0.2em;" />
+	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-bottom:0.2em;" />
+	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-bottom:0.2em;" />
+	  <img src="{{STATIC_URL}}api/icons/star.png" width="10px" style="padding-bottom:0.2em;" />
+	  </small></h1>
+	
+	  <!-- Buttons -->
+	  <a class="button" href="#"><img src="{{STATIC_URL}}api/icons/list.png" height="15px" /><h3 style="display:inline; padding-left:15px;">LISTA</h3></a>
+	  <div style="padding-top:25px;"></div>
+	  <div id="scrollable">
+	    <a class="left_option" href="#">Preco</a><a class="right_option" href="#">Data</a>
+	    <span style="padding:10px;"></span>
+	    <a class="left_option" href="#" onClick="document.getElementById('list').style.visibility='hidden'; document.getElementById('grid').style.visibility='visible';"><img src="{{STATIC_URL}}api/icons/grid.png" height="15px" /></a><a class="right_option" href="#" onClick="document.getElementById('list').style.visibility='visible'; document.getElementById('grid').style.visibility='hidden';"><img src="{{STATIC_URL}}api/icons/list_muted.png" height="15px" /></a>
+	  <div style="padding-top:35px;"></div>
+	  <div id="results">
+	
+	  {% if ads_list %}
+	    {% for ad in ads_list.houses %}
+	  
+	    <div class="house">
+		  <a href="#">
+		
+		  <!-- Code to get the profile pic of an ad (doesn't retrieve anything) -->
+		  <!--{% for photo in ad.photos %}
+			{% if photo.profile %}
+			  <img src="data:image/jpeg;base64,{{photo.uri}}" alt="">
+			{% else %}
+			  <img src="{{STATIC_URL}}api/images/placeholder.jpg" alt="">
+			{% endif %}
+		  {% endfor %}-->
+		  
+		  <!-- Placeholder ad profile image -->
+		  <img src="{{STATIC_URL}}api/images/placeholder.jpg" alt="">
+		
+		  <!-- Other ad info -->
+		  <div id="place">{{ad.location.address}}</div>
+		  <div id="info">
+			 <h2>{{ad.ad_title}}</h2>
+			<h4>{{ad.rent_price}} euros</h4>
+		  </div>
+		</a>
+		<p><small id="date"><script>document.write(howLongAgo(1422456727000))</script></small><p>
+		
+	  </div>
+	  {% endfor %}
+	{% else %}
+	  <p>De momento nao ha imoveis disponiveis.</p>
+	{% endif %}
+	  
+	  
+	</div>
+	</div>
+	
+	<!--
+	
+	{% if ads_list %}
+    <ul>
+    {% for ad in ads_list.houses %}
+      <span>{{ad.slug}}
+	  <br>
+	  
+	  <br>
+	  {{ad.description}}
+	  <br>
+	  {{ad.ad_title}}
+	  
+	  </span>
+    {% endfor %}
+    </ul>
+    {% else %}
+      <p>No ads are available</p>
+    {% endif %}
+	
+	-->
+	</div>
+  </body>
+</html>

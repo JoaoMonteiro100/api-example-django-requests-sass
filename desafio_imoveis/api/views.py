@@ -17,6 +17,20 @@ def grid(request):
     return render(request, 'api/grid.html', context)
 
 
+def list(request):
+    c = client.Client()
+    data = json.loads(c.get_ad_list())
+    context = {'ads_list': data}
+    return render(request, 'api/list.html', context)
+
+
+def content(request):
+    c = client.Client()
+    data = json.loads(c.get_ad_list())
+    context = {'ads_list': data}
+    return render(request, 'api/content.html', context)
+
+
 def ad_list():
     c = client
     data = c.get_ad_list()
