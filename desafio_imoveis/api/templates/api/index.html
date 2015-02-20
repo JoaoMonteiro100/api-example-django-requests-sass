@@ -17,7 +17,7 @@
  <div>
   <ul class="navbar">
   <li class="navbar-item">
-    <a class="navbar-item-target" onClick="document.getElementById('contents').style.visibility='visible'; document.getElementById('content').style.visibility='visible'; document.getElementById('pull-down').style.visibility='visible';" href="#"><h3>LISTAR ANÚNCIOS</h3></a>
+    <a class="navbar-item-target" onClick="changeContent()" href="#"><h3>LISTAR ANÚNCIOS</h3></a>
   </li>
   </div>
   <div id="contents">
@@ -25,19 +25,20 @@
 	<div id="legal-area">
 
 	<!-- Content (in another .html so it's possible to change only this part of the code for each page and not having to reload GMaps and the navbar all the time) -->
+	<!-- TO SE THE ADS PAGE, REPLACE "content.html" with "ad_page.html" -->
 	<object id="content" type="text/html" data="content.html">
 		<p>ERRO</p>
 	</object>
+	
 	</div>
-
   </div>
   </div>
   
   <!-- GMaps API here -->
   <div id="map-canvas"></div>
 
-  <a id="pull-up" href="#" onClick="document.getElementById('contents').style.visibility='visible'; document.getElementById('content').style.visibility='visible'; document.getElementById('pull-down').style.visibility='visible';"><img src="{{STATIC_URL}}api/icons/arrow_right.png"></img></a>
-  <a id="pull-down" href="#" onClick="document.getElementById('contents').style.visibility='hidden'; document.getElementById('content').style.visibility='hidden'; document.getElementById('pull-down').style.visibility='hidden';"><img src="{{STATIC_URL}}api/icons/arrow_left.png"></img></a>
+  <a id="pull-up" href="#" onClick="changeContent()"><img src="{{STATIC_URL}}api/icons/arrow_right.png"></img></a>
+  <a id="pull-down" href="#" onClick="changeContent()"><img src="{{STATIC_URL}}api/icons/arrow_left.png"></img></a>
 
   </body>
 </html>

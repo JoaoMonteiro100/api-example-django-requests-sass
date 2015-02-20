@@ -61,3 +61,13 @@ function howLongAgo(some_date) {
 	}
 	return text;
 };
+
+function changeContent() {
+    var element = document.getElementById("content");
+	if (element.style.visibility == "visible") {
+		document.getElementById('contents').style.visibility='hidden'; document.getElementById('content').style.visibility='hidden'; document.getElementById('pull-down').style.visibility='hidden';
+	}
+	else {
+		document.getElementById('contents').style.visibility='visible'; document.getElementById('content').style.visibility='visible'; document.getElementById('pull-down').style.visibility='visible';
+	}
+}
