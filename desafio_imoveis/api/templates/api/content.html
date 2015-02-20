@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <title>Imóveis | Sítio Perfeito</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}api/css/style.css">
@@ -37,13 +37,18 @@
 	  <div style="padding-top:35px;"></div>
 	  <div id="results">
 	
+	  <!-- Goes through the ads list and shows them one by one -->
 	  {% if ads_list %}
 	    {% for ad in ads_list.houses %}
-	  
 	    <div class="house">
+		
+		  <!-- I couldn't make the href to the ad's page. Here are the ways I found that may do it (don't mind the spaces between {'s and %'s):
+			1) { % url api.views.get_ad ad.slug % }
+			2) { % url 'api:ad_page' ad.slug % }
+		  Alas, none worked for me. So, no href. I suspect it might have to do with 'urls.py' or 'views.py' though. Will look into it. -->
 		  <a href="#">
 		
-		  <!-- Code to get the profile pic of an ad (doesn't retrieve anything) -->
+		  <!-- Code to get the profile pic of an ad (I think it successfully retrieves it but doesn't know how to process it) -->
 		  <!--{% for photo in ad.photos %}
 			{% if photo.profile %}
 			  <img src="data:image/jpeg;base64,{{photo.uri}}" alt="">
@@ -52,7 +57,7 @@
 			{% endif %}
 		  {% endfor %}-->
 		  
-		  <!-- Placeholder ad profile image -->
+		  <!-- Placeholder ad profile image (to remove when code above is working) -->
 		  <img src="{{STATIC_URL}}api/images/placeholder.jpg" alt="">
 		
 		  <!-- Other ad info -->
@@ -62,7 +67,7 @@
 			<h4>{{ad.rent_price}} €</h4>
 		  </div>
 		</a>
-		<p><small id="date"><script>document.write(howLongAgo({{ad.date}}))</script></small><p>
+		<p><small><script>document.write(howLongAgo({{ad.date}}))</script></small><p>
 		
 	  </div>
 	  {% endfor %}
@@ -70,6 +75,7 @@
 	  <p>De momento não há imóveis disponíveis.</p>
 	{% endif %}
 
+	  <!-- Hardcoded example -->
 	  <div class="house">
 		  <a href="#">
 		  <img src="{{STATIC_URL}}api/images/placeholder.jpg" alt="">
@@ -80,45 +86,11 @@
 		  </div>
 		</a>
 		<p><small id="date">Adicionado há 5 minutos.</small><p>
-		
 	  </div>
 
 	</div>
 	</div>
-	
-	<!--
-	
-	{% if ads_list %}
-    <ul>
-    {% for ad in ads_list.houses %}
-      <span>{{ad.slug}}
-	  <br>
-	  
-	  <br>
-	  {{ad.description}}
-	  <br>
-	  {{ad.ad_title}}
-	  
-	  </span>
-    {% endfor %}
-    </ul>
-    {% else %}
-      <p>No ads are available</p>
-    {% endif %}
-	
-	-->
 	</div>
-	
-	<!-- Initially hidden; it's where each ad page appears -->
-	<div id="contents">
-	
-	<object id="ad_page" type="text/html" data="ad_page.html">
-		<p>ERRO</p>
-	</object>
-	
-	
-	</div>
-	
 	
   </body>
 </html>

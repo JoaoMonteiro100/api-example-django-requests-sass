@@ -262,7 +262,7 @@ p small {
   img {
     padding-top: 10px;
     width: 111%;
-	height: 150px;
+	height: 30%;
 	position: relative;
 	bottom: -5px;
   }
@@ -307,7 +307,7 @@ p small {
 }
   object {
     height: 100%;
-	width: 125%;
+	width: 126%;
 	border: 0;
 	overflow-y: hidden;
 }
@@ -318,4 +318,93 @@ p small {
 
   #list {
     visibility: hidden;
+}
+
+/* AD PAGE */
+
+#cover-up {
+  background: $terciary-color;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  top: 60px;
+  height: 50px;
+  right: -2px;
+  width: 500%;
+  z-index:-1;
+}
+
+#ad_title {
+  h1 {
+    padding-top: 25px;
+	padding-bottom: 0px;
+	font-height: 0px;
+  }
+  
+  h6 {
+    padding-top: 0px;
+	font-height: 0px;
+	position: relative;
+	top: -35px;
+  }
+}
+
+#ad_exit {
+  position: fixed;
+  top: 35px;
+  right: 20%
+}
+
+#ad_image {
+  h6 {
+    padding-top: 0px;
+	font-height: 0px;
+	position: relative;
+	top: -70px;
+  }
+  
+  img {
+    position: absolute;
+	top: 100px;
+	width: 100%;
+	z-index: -1;
+  }
+  
+  #like {
+    position: absolute;
+	top: 110px;
+	width: 60px;
+	z-index: -1;
+  }
+
+  h1 {
+    color: white;
+    padding-top: 0px;
+	font-height: 0px;
+	position: absolute;
+	top: 90px;
+	left: 70px;
+	z-index: 2;
+  }
+}
+
+#features {
+  position: absolute;
+  top: 600px;
+  width: 200px;
+
+  img {
+    width: 20px;
+  }
+}
+
+#characteristics {
+  position: absolute;
+  top: 600px;
+  right: 150px;
+  
+  p {
+    font-height: 1px;
+	padding: 0px;
+  }
 }

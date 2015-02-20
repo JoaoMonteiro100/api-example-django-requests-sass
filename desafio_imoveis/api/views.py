@@ -30,14 +30,23 @@ def content(request):
     context = {'ads_list': data}
     return render(request, 'api/content.html', context)
 
-
-def ad_page(request, slug):
+def ad_page(request):
     c = client.Client()
-    data = json.loads(c.get_ad(slug))
+    data = json.loads(c.get_ad_list())
     context = {'ads_list': data}
     return render(request, 'api/ad_page.html', context)
 
 """
+def ad_page(request, slug):
+    c = client.Client()
+    try:
+        data = json.loads(c.get_ad(slug))
+    except Question.DoesNotExist:
+        raise Http404("Esse anuncio nao existe")
+    context = {'ad': data}
+    return render(request, 'api/ad_page.html', context)
+    #return render_to_response('ad_page.html', context, RequestContext(request))
+
 def ad_list():
     c = client
     data = c.get_ad_list()

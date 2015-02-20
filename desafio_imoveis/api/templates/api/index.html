@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Imóveis - Sítio Perfeito</title>
+    <title>Imóveis | Sítio Perfeito</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}api/css/style.css">
@@ -10,12 +10,10 @@
 	<script src="{{STATIC_URL}}api/js/script.js"></script>
 	<script src="{{STATIC_URL}}api/js/google_maps.js"></script>
 	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
-	<script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
-	<script type='text/javascript' src='js/dynamicpage.js'></script>
   </head>
   <body>
   
- <!-- MENU -->
+ <!-- Menu -->
  <div>
   <ul class="navbar">
   <li class="navbar-item">
@@ -26,16 +24,16 @@
   <div class="muted"></div>
 	<div id="legal-area">
 
-	
+	<!-- Content (in another .html so it's possible to change only this part of the code for each page and not having to reload GMaps and the navbar all the time) -->
 	<object id="content" type="text/html" data="content.html">
 		<p>ERRO</p>
 	</object>
 	</div>
-  
-  
+
   </div>
   </div>
- 
+  
+  <!-- GMaps API here -->
   <div id="map-canvas"></div>
 
   <a id="pull-up" href="#" onClick="document.getElementById('contents').style.visibility='visible'; document.getElementById('content').style.visibility='visible'; document.getElementById('pull-down').style.visibility='visible';"><img src="{{STATIC_URL}}api/icons/arrow_right.png"></img></a>
